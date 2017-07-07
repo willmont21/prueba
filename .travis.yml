@@ -14,7 +14,7 @@ matrix:
     - php: hhvm
   allow_failures:
 
-script: phpunit HelloWorldTest.php
+script: phpunit test.php
 
 
 # configure notifications (email, IRC, campfire etc)
