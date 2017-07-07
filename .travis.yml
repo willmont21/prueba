@@ -1,22 +1,11 @@
-# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
-
-# list any PHP version you want to test against
+dist: xenial
 php:
-  # using major version aliases
-  - 5.5
+- 7.0
 
+before_install:
+- sudo apt-get update -q
 
+before_script: true
 
-# optionally set up exclutions and allowed failures in the matrix
-matrix:
-  exclude:
-    - php: hhvm
-  allow_failures:
-
-script: phpunit test.php
-
-
-# configure notifications (email, IRC, campfire etc)
-notifications:
-  irc: "irc.freenode.org#yourfavouriteroomfortravis"
+script: phpunit CalculatorTest.php 
